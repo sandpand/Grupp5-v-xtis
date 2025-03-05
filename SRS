@@ -29,7 +29,8 @@ The system is a standalone Arduino-based device.
 * Control a water pump based on soil moisture.
 * Control a UV LED based on light levels.
 * Provide an LED indicator for watering status.
-* (Optional) Display sensor readings on an OLED screen.
+* Display sensor readings on an OLED screen.
+* (Optional) Monitor soil- and light status via an external application.
 
 ### 2.3 User Characteristics
 
@@ -56,7 +57,7 @@ The system is a standalone Arduino-based device.
 * **FR3:** The system shall measure ambient light levels at regular intervals.
 * **FR4:** The system shall activate the UV LED when ambient light falls below a predefined threshold.
 * **FR5:** The system shall provide an LED indicator for water pump status.
-* **FR6:** (Optional) The system shall display soil moisture and light levels on an OLED screen.
+* **FR6:** The system shall display soil moisture and light levels on an OLED screen.
 * **FR7:** (Optional) The system shall use an RTC module to schedule watering and UV light.
 
 ### 3.2 Non-Functional Requirements
