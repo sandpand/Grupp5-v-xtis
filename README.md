@@ -34,11 +34,3 @@ This project is an Arduino-based automatic plant watering system with light and 
 ## Usage
 
 The system will automatically monitor soil moisture and light levels and activate the water pump and UV LED as needed. The LED indicator will show the status of the water pump.
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
