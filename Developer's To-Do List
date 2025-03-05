@@ -7,9 +7,8 @@
 * [ ] Test each component individually.
 * [ ] Integrate all components into the complete circuit.
 * [ ] (Optional) Design and 3D print an enclosure.
-* [ ] Integrate a Bluetooth module (e.g., HC-05 or HM-10) for communication with the app.
 
-## Software (Arduino)
+## Software
 
 * [ ] Write Arduino code for reading soil moisture sensor.
 * [ ] Write Arduino code for reading light sensor.
@@ -19,31 +18,16 @@
 * [ ] Implement LED indicator for pump status.
 * [ ] Implement OLED display functionality.
 * [ ] (Optional) Implement RTC module functionality.
-* [ ] Implement Bluetooth communication to send sensor data to the app.
 * [ ] Test sensor readings and control logic.
 * [ ] Calibrate sensors and adjust thresholds.
 * [ ] Optimize code for efficiency.
 * [ ] Document the code.
-
-## (optional) Mobile Application Development
-
-* [ ] Choose a mobile app development platform (e.g., React Native, Flutter, native Android/iOS).
-* [ ] Design the app's user interface (UI).
-* [ ] Implement Bluetooth communication in the app to receive sensor data.
-* [ ] Display soil moisture and light level readings in the app.
-* [ ] Implement a real-time graph for sensor data.
-* [ ] Implement notifications for low soil moisture or low light levels.
-* [ ] Implement history logging of sensor data.
-* [ ] Test the app on different devices.
-* [ ] Optimize the app for performance.
-* [ ] Document the app's code.
 
 ## Testing
 
 * [ ] Test the system in a controlled environment.
 * [ ] Test the system with different types of plants.
 * [ ] Monitor the system for reliability over time.
-* [ ] Test the Bluetooth communication and app functionality.
 * [ ] Document test results.
 
 ## Documentation
@@ -54,4 +38,3 @@
 * [ ] Create a schematic diagram of the circuit.
 * [ ] Document the assembly process.
 * [ ] Create a user manual.
-* [ ] Create an app user guide.
