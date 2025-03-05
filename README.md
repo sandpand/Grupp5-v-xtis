@@ -7,7 +7,7 @@ This project is an Arduino-based automatic plant watering system with light and 
 * Automatic watering based on soil moisture.
 * Automatic UV light control based on ambient light levels.
 * LED indicator for watering status.
-* (Optional) OLED display for sensor readings.
+* LCD display for sensor readings.
 
 ## Components
 
@@ -20,7 +20,7 @@ This project is an Arduino-based automatic plant watering system with light and 
 * LED
 * Connecting Wires
 * Breadboard
-* (Optional) OLED Display
+* LCD Display
 * (Optional) RTC Module
 
 ## Getting Started
