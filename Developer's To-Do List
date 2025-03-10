@@ -1,12 +1,10 @@
-# 🛠️ Developer's To-Do List
+#  Developer's To-Do List
 
-## 📝 Backlog - *(Tasks that may be implemented later or are not prioritized yet.)*  
+## Backlog
 - [ ] (Optional) Implement RTC module functionality.  
 
-## 🚀 To Do - *(Planned tasks ready to be started.)*  
-- [ ] Acquire all necessary components.  
+##  To Do 
 - [ ] Build the circuit on a breadboard.  
-- [ ] Create prototype in TinkerCAD.  
 - [ ] Write Arduino code for reading soil moisture sensor.  
 - [ ] Write Arduino code for reading light sensor.  
 - [ ] Write Arduino code for controlling the water pump.  
@@ -14,24 +12,24 @@
 - [ ] Implement logic for automatic watering and UV light control.  
 - [ ] Implement LED indicator for pump status.  
 - [ ] Implement LCD display functionality.  
+- [ ] Test each component individually.  
+- [ ] Integrate all components into the complete circuit. 
 - [ ] Test sensor readings and control logic.  
 - [ ] Calibrate sensors and adjust thresholds.  
 - [ ] Optimize code for efficiency.  
 - [ ] Document the code.  
-- [ ] Test the system in a controlled environment.  
-- [ ] Test the system with different types of plants.  
-- [ ] Monitor the system for reliability over time.  
+- [ ] Test the system in a controlled environment.   
+- [ ] Monitor the system for reliability over night.  
 - [ ] Document test results.  
 - [ ] Create a schematic diagram of the circuit.  
 - [ ] Document the assembly process.  
 - [ ] Create a user manual.  
 
-## ⚙️ In Progress  
-*(Tasks currently being worked on.)*  
-- [ ] Test each component individually.  
-- [ ] Integrate all components into the complete circuit.  
+## In Progress  
+- [ ] Acquire all necessary components.   
+- [ ] Create prototype in TinkerCAD.  
 
-## ✅ Done  - *(Completed tasks.)*  
+## Done  
 - [x] Create README.md.  
 - [x] Create SRS.md.  
 - [x] Create TODO.md.  
