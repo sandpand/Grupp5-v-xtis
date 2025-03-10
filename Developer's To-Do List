@@ -5,12 +5,7 @@
 
 ##  To Do 
 - [ ] Build the circuit on a breadboard.  
-- [ ] Write Arduino code for reading soil moisture sensor.  
-- [ ] Write Arduino code for reading light sensor.  
-- [ ] Write Arduino code for controlling the water pump.  
-- [ ] Write Arduino code for controlling the UV LED.  
-- [ ] Implement logic for automatic watering and UV light control.  
-- [ ] Implement LED indicator for pump status.  
+
 - [ ] Implement LCD display functionality.  
 - [ ] Test each component individually.  
 - [ ] Integrate all components into the complete circuit. 
@@ -32,4 +27,10 @@
 ## Done  
 - [x] Create README.md.  
 - [x] Create SRS.md.  
-- [x] Create TODO.md.  
+- [x] Create TODO.md.
+- [x] Write Arduino code for reading soil moisture sensor.  
+- [x] Write Arduino code for reading light sensor.  
+- [x] Write Arduino code for controlling the water pump.  
+- [x] Write Arduino code for controlling the UV LED.  
+- [x] Implement logic for automatic watering and UV light control.  
+- [x] Implement LED indicator for pump status.  
