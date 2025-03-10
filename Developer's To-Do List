@@ -6,17 +6,16 @@
 * [ ] Build the circuit on a breadboard.
 * [ ] Test each component individually.
 * [ ] Integrate all components into the complete circuit.
-* [ ] (Optional) Design and 3D print an enclosure.
 
 ## Software
-
+* [ ] Create prototype in TinkerCAD
 * [ ] Write Arduino code for reading soil moisture sensor.
 * [ ] Write Arduino code for reading light sensor.
 * [ ] Write Arduino code for controlling the water pump.
 * [ ] Write Arduino code for controlling the UV LED.
 * [ ] Implement logic for automatic watering and UV light control.
 * [ ] Implement LED indicator for pump status.
-* [ ] Implement OLED display functionality.
+* [ ] Implement LCD display functionality.
 * [ ] (Optional) Implement RTC module functionality.
 * [ ] Test sensor readings and control logic.
 * [ ] Calibrate sensors and adjust thresholds.
