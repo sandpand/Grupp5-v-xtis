@@ -3,7 +3,7 @@
 ## Backlog
 - [ ] (Optional) Implement RTC module functionality.  
 
-##  To Do 
+##  To Do
 - [ ] Build the circuit on a breadboard.  
 - [ ] Test each component individually.  
 - [ ] Integrate all components into the complete circuit. 
@@ -21,10 +21,11 @@
 ## In Progress  
 - [ ] Acquire all necessary components. 
 
-## Done  
+## Done 
 - [x] Create README.md.  
 - [x] Create SRS.md.  
 - [x] Create TODO.md.
+- [x] Analyze all necessary components, make a shopping list.
 - [x] Write Arduino code for reading soil moisture sensor.  
 - [x] Write Arduino code for reading light sensor.  
 - [x] Write Arduino code for controlling the water pump.  
