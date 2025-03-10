@@ -5,8 +5,6 @@
 
 ##  To Do 
 - [ ] Build the circuit on a breadboard.  
-
-- [ ] Implement LCD display functionality.  
 - [ ] Test each component individually.  
 - [ ] Integrate all components into the complete circuit. 
 - [ ] Test sensor readings and control logic.  
@@ -21,8 +19,7 @@
 - [ ] Create a user manual.  
 
 ## In Progress  
-- [ ] Acquire all necessary components.   
-- [ ] Create prototype in TinkerCAD.  
+- [ ] Acquire all necessary components. 
 
 ## Done  
 - [x] Create README.md.  
@@ -33,4 +30,8 @@
 - [x] Write Arduino code for controlling the water pump.  
 - [x] Write Arduino code for controlling the UV LED.  
 - [x] Implement logic for automatic watering and UV light control.  
-- [x] Implement LED indicator for pump status.  
+- [x] Implement LED indicator for pump status.
+- [x] Implement LCD display functionality.
+- [x] Create prototype in TinkerCAD.  
+
+
