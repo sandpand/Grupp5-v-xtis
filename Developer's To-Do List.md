@@ -2,13 +2,13 @@
 
 ## Backlog
 - [ ] (Optional) Implement RTC module functionality.  
-  - *As a user, I want the system to track time so that scheduled watering can occur even if the Arduino is restarted.*
+  - *As a user, I want the system to track time so that scheduled watering can occur even if the Arduino is restarted and to ensure that the the system can be programed to handle different plants.*
 
 ## To Do
 - [ ] Build the circuit on a breadboard.  
   - *As a developer, I need to assemble the circuit on a breadboard to test and iterate before finalizing the design.*  
 - [ ] Test each component individually.  
-  - *As a developer, I want to verify that each component (sensors, pump, relay, etc.) works correctly before integration.*  
+  - *As a developer, I want to verify that each component (sensors, pump, relay, etc.) works correctly before integration.* 
 - [ ] Integrate all components into the complete circuit.  
   - *As a developer, I need to connect all components to ensure they function together as expected.*  
 - [ ] Test sensor readings and control logic.  
@@ -27,8 +27,6 @@
   - *As a developer, I need to document test results to track performance and identify any issues.*  
 - [ ] Create a schematic diagram of the circuit.  
   - *As a developer, I need a clear schematic diagram so others can understand and replicate the circuit design.*  
-- [ ] Document the assembly process.  
-  - *As a user, I want a step-by-step assembly guide so I can build and troubleshoot the system easily.*  
 - [ ] Create a user manual.  
   - *As a user, I need a simple and clear user manual so I can operate and maintain the system effectively.*  
 
@@ -52,7 +50,7 @@
 - [x] Write Arduino code for controlling the water pump.  
   - *As a user, I want the water pump to turn on only when needed to avoid overwatering.*  
 - [x] Write Arduino code for controlling the UV LED.  
-  - *As a user, I want the UV LED to activate when needed to help with plant health and pest control.*  
+  - *As a user, I want the UV LED to activate when needed to help with plant health.*  
 - [x] Implement logic for automatic watering and UV light control.  
   - *As a user, I want an automated system that manages watering and UV exposure based on real-time conditions.*  
 - [x] Implement LED indicator for pump status.  
