@@ -8,8 +8,9 @@ void setLEDColor(int red, int green, int blue);
 
 int LED = 5;
 int R_pin = 2;
-int B_pin = 4;
 int G_pin = 3;
+int B_pin = 4;
+
 int waterPump = 12;
 int soilSensor = A0;
 int lightSensor = A1;
