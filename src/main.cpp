@@ -7,9 +7,9 @@ void controlGrowLight(int lightValue);
 void setLEDColor(int red, int green, int blue);
 
 int LED = 5;
-int R_pin = 4;
-int B_pin = 3;
-int G_pin = 2;
+int R_pin = 2;
+int B_pin = 4;
+int G_pin = 3;
 int waterPump = 12;
 int soilSensor = A0;
 int lightSensor = A1;
@@ -70,7 +70,7 @@ void displaySensorValues(int soilValue, int lightValue)
 
 void controlWaterPumpAndLEDs(int soilValue)
 {
-  if (soilValue > 700)
+  if (soilValue > 950)
   {
     Serial.println("Water pump on");
 
@@ -78,9 +78,9 @@ void controlWaterPumpAndLEDs(int soilValue)
     setLEDColor(255, 0, 0);
     delay(1000);
   }
-  else if (soilValue <= 265)
+  else if (soilValue >= 365)
   {
-    setLEDColor(255, 127, 0);
+    setLEDColor(0, 0, 255);
   }
   else
   {
@@ -94,7 +94,7 @@ void controlGrowLight(int lightValue)
   if (lightValue < 50)
   {
     digitalWrite(LED, HIGH);
-    Serial.println("Grow light on");
+    //Serial.println("Grow light on");
   }
   else
   {
