@@ -50,52 +50,55 @@ void displaySensorValues(int soilValue, int lightValue)
 {
   lcd_1.setCursor(0, 0);
   lcd_1.print("Soil value: ");
-  lcd_1.println(soilValue);
+  lcd_1.print("    ");  
+  lcd_1.setCursor(12, 0);
+  lcd_1.print(soilValue);
+
+  Serial.print("Soil value: ");
+  Serial.println(soilValue);
 
   lcd_1.setCursor(0, 1);
   lcd_1.print("Light value: ");
-  lcd_1.println(lightValue);
+  lcd_1.print("    ");  
+  lcd_1.setCursor(13, 1);
+  lcd_1.print(lightValue);
+
+  Serial.print("Light value: ");
+  Serial.println(lightValue);
 }
+
 
 void controlWaterPumpAndLEDs(int soilValue)
 {
   if (soilValue > 700)
   {
-    digitalWrite(waterPump, LOW);
-    setLEDColor(0, 255, 0);
-  }
-  else if (soilValue >= 265)
-  {
-    setLEDColor(255, 127, 0);
-  }
-  else
-  {
-    lcd_1.clear();
-    lcd_1.print("Soil value: ");
-    lcd_1.println(soilValue);
-    lcd_1.setCursor(0, 1);
-    lcd_1.print("Water pump on");
+    Serial.println("Water pump on");
 
     digitalWrite(waterPump, HIGH);
     setLEDColor(255, 0, 0);
     delay(1000);
   }
+  else if (soilValue <= 265)
+  {
+    setLEDColor(255, 127, 0);
+  }
+  else
+  {
+    digitalWrite(waterPump, LOW);
+    setLEDColor(0, 255, 0);
+  }
 }
 
 void controlGrowLight(int lightValue)
 {
-  if (lightValue < 500)
+  if (lightValue < 50)
   {
-    digitalWrite(LED, LOW);
-    lcd_1.clear();
-    lcd_1.print("Light value: ");
-    lcd_1.println(lightValue);
-    lcd_1.setCursor(0, 1);
-    lcd_1.print("Grow light on");
+    digitalWrite(LED, HIGH);
+    Serial.println("Grow light on");
   }
   else
   {
-    digitalWrite(LED, HIGH);
+    digitalWrite(LED, LOW);
   }
 }
 
