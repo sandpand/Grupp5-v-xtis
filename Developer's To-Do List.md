@@ -6,15 +6,10 @@
 
 ## To Do
 
-- [ ] Document the code.  
-  - *As a developer, I want well-documented code so that future updates and troubleshooting are easier.*  
 - [ ] Monitor the system for reliability overnight.  
   - *As a user, I want to see if the system functions reliably over an extended period without failures.*  
 - [ ] Document test results.  
   - *As a developer, I need to document test results to track performance and identify any issues.*  
-- [ ] Create a user manual.  
-  - *As a user, I need a simple and clear user manual so I can operate and maintain the system effectively.*
-- [ ] Write project report
 - [ ] Create a presentation
       https://docs.google.com/presentation/d/1-FLCsednNkbSDHtrpEQ5Ie0QyQTvP7nsZoZrh7UkmAU/edit?usp=sharing 
 - [ ] Re-create prototype for demo
@@ -63,4 +58,9 @@
 - [x] Test the system in a controlled environment.  
   - *As a user, I want to ensure the system operates correctly under controlled conditions before deploying it in real use.*
 - [x] Create a schematic diagram of the circuit.  
-  - *As a developer, I need a clear schematic diagram so others can understand and replicate the circuit design.*  
+  - *As a developer, I need a clear schematic diagram so others can understand and replicate the circuit design.*
+- [x] Document the code.  
+  - *As a developer, I want well-documented code so that future updates and troubleshooting are easier.*  
+- [x] Create a user manual.  
+  - *As a user, I need a simple and clear user manual so I can operate and maintain the system effectively.*
+- [x] Write project report
