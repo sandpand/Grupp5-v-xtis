@@ -106,7 +106,7 @@ void controlWaterPumpAndLEDs(int soilValue)
  */
 void controlGrowLight(int lightValue)
 {
-  if (lightValue < 50) // Example condition for turning on the grow light
+  if (lightValue < 35) // Example condition for turning on the grow light
   {
     Serial.println("Grow light ON");
     setNeopixelColor(255, 165, 0); // Warm orange/yellow for plant growth
