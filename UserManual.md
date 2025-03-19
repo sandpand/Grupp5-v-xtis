@@ -22,8 +22,8 @@ This system is designed to automatically monitor and water plants using an Ardui
 - **Startup Mode:** The system starts reading sensor data immediately.
 - **LED Status:**
   - 🟢 **Green:** Good moisture level
-  -  **Blue:** Moderate moisture level
-  -  **Red:** Dry soil – pump activated
+  - 🔵 **Blue:** Moderate moisture level
+  - 🔴 **Red:** Dry soil – pump activated
 - **UV-LED:**
   - **On:** Low light level detected
   - **Off:** Sufficient light level
