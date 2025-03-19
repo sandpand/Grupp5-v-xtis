@@ -1,48 +1,47 @@
-# Användarmanual: Smart Växtbevattningssystem
+# User Manual: Smart Plant Watering System
 
-## 1. Introduktion
-Detta system är utvecklat för att automatiskt övervaka och bevattna växter med hjälp av en Arduino-plattform. Systemet mäter jordens fuktighetsnivå och ljusnivå för att styra en vattenpump och UV-LED, vilket ger optimal bevattning och visuell feedback.
-
----
-
-## 2. Systemets Komponenter
-- **Arduino Uno** – Styrsystem
-- **Fuktighetssensor** – Mäter jordens fuktnivå
-- **Ljussensor (LDR)** – Känner av ljusnivån
-- **Vattenpump** – Vattnar automatiskt vid behov
-- **RGB-LED** – Visar växtstatus med färger
-- **UV-LED** – Aktiveras vid låg ljusnivå
-- **LCD-skärm** – Visar aktuella sensorvärden
-- **Relämodul** – Styr vattenpumpens på/av-läge
+## 1. Introduction
+This system is designed to automatically monitor and water plants using an Arduino platform. The system measures soil moisture and light levels to control a water pump and UV-LED, providing optimal watering and visual feedback.
 
 ---
 
-## 3. Användning
-### 3.1 Systemfunktioner
-- **Startläge:** Systemet börjar läsa sensordata direkt.
-- **LED-status:**
-  - 🟢 **Grön:** Bra fuktighet
-  - 🔵 **Blå:** Måttlig fuktighet
-  - 🔴 **Röd:** Torr jord – pump aktiveras
+## 2. System Components
+- **Arduino Uno** – Control system
+- **Moisture Sensor** – Measures soil moisture level
+- **Light Sensor (LDR)** – Detects light level
+- **Water Pump** – Automatically waters when needed
+- **RGB-LED** – Displays plant status with colors
+- **UV-LED** – Activates at low light levels
+- **LCD Screen** – Displays current sensor values
+- **Relay Module** – Controls the water pump's on/off state
+
+---
+
+## 3. Usage
+### 3.1 System Functions
+- **Startup Mode:** The system starts reading sensor data immediately.
+- **LED Status:**
+  - 🟢 **Green:** Good moisture level
+  -  **Blue:** Moderate moisture level
+  -  **Red:** Dry soil – pump activated
 - **UV-LED:**
-  - **På:** Låg ljusnivå upptäckt
-  - **Av:** Tillräcklig ljusnivå
-- **LCD-skärm:** Visar aktuella fukt- och ljusvärden
+  - **On:** Low light level detected
+  - **Off:** Sufficient light level
+- **LCD Screen:** Displays current moisture and light values
 
 ---
 
-## 4. Underhåll
-- **Sensorer:** Rengör regelbundet för att säkerställa korrekta avläsningar.
-- **Pump:** Kontrollera slangar och kopplingar för att undvika blockeringar.
-- **Strömförsörjning:** Kontrollera kablar och strömadapter.
+## 4. Maintenance
+- **Sensors:** Clean regularly to ensure accurate readings.
+- **Pump:** Check hoses and connections to avoid blockages.
+- **Power Supply:** Check cables and power adapter.
 
 ---
 
-## 5. Felsökning
-| **Problem**           | **Möjlig lösning**                          |
-|-----------------------|--------------------------------------------|
-| Pump startar inte     | Kontrollera kablar, relä och kod            |
-| LED lyser fel färg    | Se till att RGB-kablarna är rätt kopplade   |
-| Inget visas på LCD    | Kontrollera anslutningarna till LCD-pinnarna|
-| UV-LED lyser inte     | Kontrollera anslutning och ljusvärden       |
-
+## 5. Troubleshooting
+| **Problem** | **Possible Solution** |
+|---|---|
+| Pump does not start | Check cables, relay, and code |
+| LED displays the wrong color | Ensure RGB cables are correctly connected |
+| Nothing is displayed on the LCD | Check connections to the LCD pins |
+| UV-LED does not light up | Check connection and light values |
