@@ -5,34 +5,20 @@
   - *As a user, I want the system to track time so that scheduled watering can occur even if the Arduino is restarted and to ensure that the the system can be programed to handle different plants.*
 
 ## To Do
-- [ ] Build the circuit on a breadboard.  
-  - *As a developer, I need to assemble the circuit on a breadboard to test and iterate before finalizing the design.*  
-- [ ] Test each component individually.  
-  - *As a developer, I want to verify that each component (sensors, pump, relay, etc.) works correctly before integration.* 
-- [ ] Integrate all components into the complete circuit.  
-  - *As a developer, I need to connect all components to ensure they function together as expected.*  
-- [ ] Test sensor readings and control logic.  
-  - *As a user, I want accurate sensor readings and reliable control logic so that my plants receive the right amount of water.*  
-- [ ] Calibrate sensors and adjust thresholds.  
-  - *As a user, I want the soil moisture sensor to be properly calibrated so that watering happens only when needed.*  
-- [ ] Optimize code for efficiency.  
-  - *As a developer, I need to improve the code’s efficiency so that the system runs smoothly with minimal power usage.*  
+
 - [ ] Document the code.  
   - *As a developer, I want well-documented code so that future updates and troubleshooting are easier.*  
-- [ ] Test the system in a controlled environment.  
-  - *As a user, I want to ensure the system operates correctly under controlled conditions before deploying it in real use.*  
 - [ ] Monitor the system for reliability overnight.  
   - *As a user, I want to see if the system functions reliably over an extended period without failures.*  
 - [ ] Document test results.  
   - *As a developer, I need to document test results to track performance and identify any issues.*  
-- [ ] Create a schematic diagram of the circuit.  
-  - *As a developer, I need a clear schematic diagram so others can understand and replicate the circuit design.*  
 - [ ] Create a user manual.  
-  - *As a user, I need a simple and clear user manual so I can operate and maintain the system effectively.*  
+  - *As a user, I need a simple and clear user manual so I can operate and maintain the system effectively.*
+- [ ] Write project report
+- [ ] Create a presentation
+- [ ] Re-create prototype for demo
 
 ## In Progress  
-- [ ] Acquire all necessary components.  
-  - *As a developer, I need to gather all required components to begin building the system.*  
 
 ## Done  
 - [x] Create README.md.  
@@ -58,4 +44,22 @@
 - [x] Implement LCD display functionality.  
   - *As a user, I want to see real-time sensor data and system status on an LCD display for easy monitoring.*  
 - [x] Create prototype in TinkerCAD.  
-  - *As a developer, I need a virtual prototype to test the design before physically assembling the system.*  
+  - *As a developer, I need a virtual prototype to test the design before physically assembling the system.*
+- [x] Acquire all necessary components.  
+  - *As a developer, I need to gather all required components to begin building the system.*  
+- [x] Build the circuit on a breadboard.  
+  - *As a developer, I need to assemble the circuit on a breadboard to test and iterate before finalizing the design.*  
+- [x] Test each component individually.  
+  - *As a developer, I want to verify that each component (sensors, pump, relay, etc.) works correctly before integration.* 
+- [x] Integrate all components into the complete circuit.  
+  - *As a developer, I need to connect all components to ensure they function together as expected.*  
+- [x] Test sensor readings and control logic.  
+  - *As a user, I want accurate sensor readings and reliable control logic so that my plants receive the right amount of water.*  
+- [x] Calibrate sensors and adjust thresholds.  
+  - *As a user, I want the soil moisture sensor to be properly calibrated so that watering happens only when needed.*
+- [x] Test the system in a controlled environment.  
+  - *As a user, I want to ensure the system operates correctly under controlled conditions before deploying it in real use.*
+- [x] Test the system in a controlled environment.  
+  - *As a user, I want to ensure the system operates correctly under controlled conditions before deploying it in real use.*
+- [x] Create a schematic diagram of the circuit.  
+  - *As a developer, I need a clear schematic diagram so others can understand and replicate the circuit design.*  
