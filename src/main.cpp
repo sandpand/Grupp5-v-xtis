@@ -90,7 +90,7 @@ void controlWaterPumpAndLEDs(int soilValue)
   }
   else if (soilValue >= 450)
   {
-    setLEDColor(255, 0, 0); // Set LED color to yellow
+    setLEDColor(255, 0, 0); // Set LED color to blue
   }
   else
   {
