@@ -1,34 +1,51 @@
-# Beskrivning av arbetet med fokus på HUR vi arbetade agilt
-Under projektet har vi utvecklat ett automatiskt bevattningssystem för växter, som använder en 
-Arduino-plattform för att mäta jordens fuktighet och omgivande ljusnivåer. Systemet styr sedan en 
-vattenpump och en LED baserat på dessa mätvärden för att säkerställa att växten får rätt mängd 
-vatten och ljus. 
+# **Beskrivning av arbetet med fokus på HUR vi arbetade agilt**  
 
-Först byggde vi och testade kretsarna i TinkerCAD för att skapa en virtuell prototyp och säkerställa 
-att alla komponenter fungerade som de skulle. Därefter utvecklade vi koden för att hantera 
-sensorer, pumpar och LED-ljus. När vi var nöjda med designen och funktionaliteten i den 
-virtuella miljön, byggde vi och testade kretsarna på en bräda. Systemet implementerades med funktioner för 
-att visa sensoravläsningar på en LCD-display och ge användaren feedback genom LED-lampor. 
+Under projektet utvecklade vi ett automatiskt bevattningssystem för växter baserat på en Arduino-plattform. Systemet mäter jordens fuktighetsnivå och omgivande ljusnivåer och styr en vattenpump samt en LED-lampa utifrån dessa mätvärden för att säkerställa optimal bevattning. Vi inledde arbetet med att bygga och testa kretsarna i TinkerCAD för att skapa en virtuell prototyp och säkerställa att alla komponenter fungerade korrekt. Därefter utvecklade vi koden för att hantera sensorer, pump och LED-lampa. När vi var nöjda med funktionaliteten i den virtuella miljön, byggde vi systemet fysiskt och genomförde omfattande tester. Systemet implementerades även med en LCD-display för att visa sensoravläsningar och ge användaren tydlig feedback.  
 
-Vi arbetade agilt genom att skapa en *Develoer's To-Do list* och en *SRS* (Software Requirements Specification), som vi hade som levande dokument under hela projektet. Vi arbetade tätt tillsammans och kunde hantera uppgifterna genom löpande kommunikation. Kommunikationsflödet var en central del av vårt arbetssätt, och genom att kontinuerligt ge varandra feedback kunde vi snabbt identifiera förbättringsområden och göra ändringar där det behövdes. Eftersom projektet var tidsbegränsat och pågick i endast två veckor, ansåg vi att det skulle ta för mycket tid att implementera och upprätthålla en Kanban-tavla.
+För att arbeta agilt använde vi en **Developer's To-Do list** och en **SRS** (*Software Requirements Specification*) som levande dokument genom hela projektet. Vi arbetade tätt tillsammans och kommunicerade kontinuerligt för att hantera uppgifter effektivt. Genom att ge varandra löpande feedback kunde vi snabbt identifiera förbättringsområden och göra nödvändiga justeringar. Eftersom projektet endast pågick under två veckor valde vi att inte implementera en Kanban-tavla, då vi bedömde att det skulle vara tidskrävande att upprätthålla.  
 
-Arbetet delades upp i olika faser: Först fokuserade vi på att planera och definiera *SRS* och *Develoer's To-Do list*. Därefter genomförde vi en TinkerCAD-simulering för att testa och validera designen. Slutligen koplade vi ally fysiskt och genomförde omfattande tester för att säkerställa att systemet fungerade som förväntat.
+### **Arbetsfaser**  
+1. **Planering och kravställning** – Vi definierade **SRS** och **Developer's To-Do list** för att få en tydlig riktning.  
+2. **Simulering och prototypframtagning** – Vi testade och validerade designen i TinkerCAD.  
+3. **Fysisk implementering och testning** – Vi byggde systemet och utförde omfattande tester för att säkerställa att det fungerade enligt våra krav.  
 
-# Reflektion över vårt arbetssätt
-o Hur fungerade samarbetet i teamet?
-o Vad tar ni med er för lärdomar till nästa projekt?
-o Vad skulle ni vilja gjort annorlunda?
+---
 
-# Beskrivning av resultatet
-o Hur långt kom ni med färdigställandet av uppgiften?
-o Hur gick den gemensamma kompletterande instuderingen?
-o Vad finns kvar att göra?
-o Eventuell vidareutveckling
+# **Reflektion över vårt arbetssätt**  
 
-# Reflektion över resultatet
-o Fungerar systemet som tänkt?
-o Kodens kvalité?
+### **Hur fungerade samarbetet i teamet?**  
+Samarbetet fungerade mycket bra. Vi arbetade tätt tillsammans och hade en tydlig gemensam vision redan från start, vilket gjorde planeringen effektiv. Vi diskuterade eventuella ändringar och nya förslag öppet, vilket hjälpte oss att fatta snabba beslut. Kommunikationsflödet i gruppen var avgörande för att vi kunde genomföra projektet smidigt och effektivt.  
 
-# Länk till GitHub-repo.
-o Dokumentation i README om projektet och relaterad information, typ länkar,
-etc.
+### **Vad tar vi med oss för lärdomar till nästa projekt?**  
+En av de viktigaste lärdomarna är vikten av detaljerad planering. Vi stötte exempelvis på förseningar eftersom vi inte hade tänkt på att vissa komponenter krävde en skruvmejsel för montering. Dessutom insåg vi vikten av noggrannhet vid koppling av kretsarna, då en enda felkopplad kabel kunde leda till tidskrävande felsökning.  
+
+### **Vad skulle vi vilja gjort annorlunda?**  
+Projektets ramar och mål var något otydliga från början, vilket gjorde det svårt att planera effektivt. Att vi parallellt arbetade med ett annat projekt skapade även utmaningar i tidsplaneringen. Nästa gång skulle vi tydligare definiera projektets omfattning från start.  
+
+En annan förbättring skulle vara att använda PlatformIO istället för Arduino IDE från början, istället för att byta IDE mitt i projektet. Vi fick vissa komponenter sent, vilket begränsade hur mycket vi kunde göra i ett tidigt skede av projektet.  
+
+---
+
+# **Beskrivning av resultatet**  
+
+### **Hur långt kom vi med färdigställandet av uppgiften?**  
+Vi lyckades utveckla ett fungerande bevattningssystem som mäter jordens fuktighetsnivå och styr vattenpumpen samt en LED-lampa utifrån dessa mätvärden. Dessutom implementerade vi en LCD-display som visar aktuella sensorvärden och ger användaren tydlig feedback om systemets status.  
+
+### **Hur gick den gemensamma kompletterande instuderingen?**  
+För att kunna använda en relämodul behövde vi fördjupa oss i hur reläer, transistorer och dioder fungerar samt hur de kopplas i kretsen. Vi behövde även läsa in oss på hur en LCD-display ansluts och programmeras för att korrekt visa sensorvärden. Denna instudering hjälpte oss att undvika misstag och säkerställde att systemet fungerade som förväntat.  
+
+### **Vad finns kvar att göra?**  
+Vi har uppnått de mål vi satte upp för projektet, men en viktig förbättring skulle vara att bygga en skyddande inkapsling för komponenterna. Detta skulle hjälpa till att skydda elektroniken från vatten och andra yttre faktorer.  
+
+### **Eventuell vidareutveckling**  
+För att göra systemet mer skalbart skulle vi kunna anpassa koden för att stödja olika typer av pumpar och växter med varierande bevattningsbehov. På så sätt skulle systemet kunna användas i fler miljöer och för olika typer av växtodlingar. En annan potentiell förbättring är att integrera en övervakningsfunktion via en mobilapp eller webbsida, vilket skulle ge användaren möjlighet att styra och övervaka bevattningen på distans.  
+
+---
+
+# **Reflektion över resultatet**  
+
+### **Fungerar systemet som tänkt?**  
+Ja, systemet fungerar som planerat och bevattnar växten automatiskt baserat på fuktighetsnivån i jorden. Sensordata visas korrekt på LCD-displayen och LED-lampan ger visuell feedback.  
+
+### **Kodens kvalitet?**  
+Koden är välstrukturerad och tydligt kommenterad, vilket gör den lätt att förstå och vidareutveckla. Dock finns det utrymme för optimering, särskilt vad gäller felhantering och energieffektivitet. Att strukturera om delar av koden för bättre modulär uppdelning skulle också kunna förbättra kodens läsbarhet och underhållbarhet.  
