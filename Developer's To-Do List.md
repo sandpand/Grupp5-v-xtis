@@ -10,9 +10,6 @@
   - *As a user, I want to see if the system functions reliably over an extended period without failures.*  
 - [ ] Document test results.  
   - *As a developer, I need to document test results to track performance and identify any issues.*  
-- [ ] Create a presentation
-      https://docs.google.com/presentation/d/1-FLCsednNkbSDHtrpEQ5Ie0QyQTvP7nsZoZrh7UkmAU/edit?usp=sharing 
-- [ ] Re-create prototype for demo
 
 ## In Progress  
 
@@ -64,3 +61,7 @@
 - [x] Create a user manual.  
   - *As a user, I need a simple and clear user manual so I can operate and maintain the system effectively.*
 - [x] Write project report
+- [x] Create a presentation
+      https://docs.google.com/presentation/d/1-FLCsednNkbSDHtrpEQ5Ie0QyQTvP7nsZoZrh7UkmAU/edit?usp=sharing 
+- [x] Re-create prototype for demo
+
