@@ -1,36 +1,6 @@
 #include <LiquidCrystal.h>
 #include <Arduino.h>
-
-/**
- * @brief Displays soil and light sensor values on an LCD and Serial monitor.
- *
- * @param soilValue The current soil moisture reading.
- * @param lightValue The current light intensity reading.
- */
-void displaySensorValues(int soilValue, int lightValue);
-
-/**
- * @brief Controls the water pump and LED indicators based on soil moisture level.
- *
- * @param soilValue The current soil moisture reading.
- */
-void controlWaterPumpAndLEDs(int soilValue);
-
-/**
- * @brief Controls the grow light based on light intensity.
- *
- * @param lightValue The current light intensity reading.
- */
-void controlGrowLight(int lightValue);
-
-/**
- * @brief Sets the RGB LED color by adjusting individual color pins.
- *
- * @param red Intensity of red color (0-255).
- * @param green Intensity of green color (0-255).
- * @param blue Intensity of blue color (0-255).
- */
-void setLEDColor(int red, int green, int blue);
+#include <Adafruit_NeoPixel.h>
 
 // Pin configurations
 int LED = 5;
@@ -41,17 +11,21 @@ int waterPump = 12;
 int soilSensor = A0;
 int lightSensor = A1;
 
+#define LED_COUNT 16
+Adafruit_NeoPixel strip(LED_COUNT, LED, NEO_GRB + NEO_KHZ800); // Initialize NeoPixel strip
+LiquidCrystal lcd_1(6, 7, 8, 9, 10, 11);                       // Initialize LCD display with specified pins
+
 // Sensor value variables
 int soilVal;
 int lightVal;
 
-// Initialize LCD display with specified pins
-LiquidCrystal lcd_1(6, 7, 8, 9, 10, 11);
+void displaySensorValues(int soilValue, int lightValue);
+void controlWaterPumpAndLEDs(int soilValue);
+void controlGrowLight(int lightValue);
+void setLEDColor(int red, int green, int blue);
+void setNeopixelColor(int red, int green, int blue);
 
-/**
- * @brief Initializes the pins and serial communication.
- */
-void setup()
+void setup() // Initializes devices and sensors.
 {
   pinMode(soilSensor, INPUT);
   pinMode(lightSensor, INPUT);
@@ -59,17 +33,14 @@ void setup()
   pinMode(G_pin, OUTPUT);
   pinMode(R_pin, OUTPUT);
   pinMode(B_pin, OUTPUT);
-  pinMode(LED, OUTPUT);
-
+  strip.begin();
+  strip.show(); // Initialize all pixels to 'off'
   Serial.begin(9600);
 
   lcd_1.begin(16, 2);
 }
 
-/**
- * @brief Repeatedly reads sensor values, updates display, and controls devices.
- */
-void loop()
+void loop() // Repeatedly reads sensor values, updates display, and controls devices.
 {
   soilVal = analogRead(soilSensor);
   lightVal = analogRead(lightSensor);
@@ -81,6 +52,12 @@ void loop()
   delay(1000); // Delay for 1 second
 }
 
+/**
+ * @brief Displays soil and light sensor values on an LCD and Serial monitor.
+ *
+ * @param soilValue The current soil moisture reading.
+ * @param lightValue The current light intensity reading.
+ */
 void displaySensorValues(int soilValue, int lightValue)
 {
   lcd_1.setCursor(0, 0); // Set cursor to first row, first column
@@ -96,6 +73,11 @@ void displaySensorValues(int soilValue, int lightValue)
   lcd_1.print(lightValue);
 }
 
+/**
+ * @brief Controls the water pump and LED indicators based on soil moisture level.
+ *
+ * @param soilValue The current soil moisture reading.
+ */
 void controlWaterPumpAndLEDs(int soilValue)
 {
   if (soilValue > 950)
@@ -103,12 +85,12 @@ void controlWaterPumpAndLEDs(int soilValue)
     Serial.println("Water pump on");
 
     digitalWrite(waterPump, HIGH); // Turn on water pump
-    setLEDColor(255, 0, 0);        // Set LED color to red
+    setLEDColor(0, 0, 255);        // Set LED color to red
     delay(1000);
   }
-  else if (soilValue >= 365)
+  else if (soilValue >= 450)
   {
-    setLEDColor(0, 0, 255); // Set LED color to blue
+    setLEDColor(255, 0, 0); // Set LED color to yellow
   }
   else
   {
@@ -117,21 +99,48 @@ void controlWaterPumpAndLEDs(int soilValue)
   }
 }
 
+/**
+ * @brief Controls the grow light based on light intensity.
+ *
+ * @param lightValue The current light intensity reading.
+ */
 void controlGrowLight(int lightValue)
 {
-  if (lightValue < 50)
+  if (lightValue < 50) // Example condition for turning on the grow light
   {
-    digitalWrite(LED, HIGH); // Turn on grow light
+    Serial.println("Grow light ON");
+    setNeopixelColor(255, 165, 0); // Warm orange/yellow for plant growth
   }
   else
   {
-    digitalWrite(LED, LOW); // Turn off grow light
+    Serial.println("Grow light OFF");
+    setNeopixelColor(0, 0, 0); // Turn off LEDs
   }
 }
 
+/**
+ * @brief Sets the RGB LED color by adjusting individual color pins.
+ *
+ * @param red Intensity of red color (0-255).
+ * @param green Intensity of green color (0-255).
+ * @param blue Intensity of blue color (0-255).
+ */
 void setLEDColor(int red, int green, int blue)
 {
   digitalWrite(R_pin, red);   // Set red color intensity
   digitalWrite(G_pin, green); // Set green color intensity
   digitalWrite(B_pin, blue);  // Set blue color intensity
+}
+
+/**
+ * @brief Sets the color of all NeoPixel LEDs.
+ *
+ */
+void setNeopixelColor(int red, int green, int blue)
+{
+  for (int i = 0; i < LED_COUNT; i++)
+  {
+    strip.setPixelColor(i, strip.Color(red, green, blue));
+  }
+  strip.show();
 }
