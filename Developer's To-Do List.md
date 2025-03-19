@@ -16,6 +16,7 @@
   - *As a user, I need a simple and clear user manual so I can operate and maintain the system effectively.*
 - [ ] Write project report
 - [ ] Create a presentation
+      https://docs.google.com/presentation/d/1-FLCsednNkbSDHtrpEQ5Ie0QyQTvP7nsZoZrh7UkmAU/edit?usp=sharing 
 - [ ] Re-create prototype for demo
 
 ## In Progress  
