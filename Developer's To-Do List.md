@@ -8,8 +8,6 @@
 
 - [ ] Monitor the system for reliability overnight.  
   - *As a user, I want to see if the system functions reliably over an extended period without failures.*  
-- [ ] Document test results.  
-  - *As a developer, I need to document test results to track performance and identify any issues.*  
 
 ## In Progress  
 
