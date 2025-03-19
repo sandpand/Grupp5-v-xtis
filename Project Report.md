@@ -20,9 +20,9 @@ Samarbetet fungerade mycket bra. Vi arbetade tätt tillsammans och hade en tydli
 En av de viktigaste lärdomarna är vikten av detaljerad planering. Vi stötte exempelvis på förseningar eftersom vi inte hade tänkt på att vissa komponenter krävde en skruvmejsel för montering. Dessutom insåg vi vikten av noggrannhet vid koppling av kretsarna, då en enda felkopplad kabel kunde leda till tidskrävande felsökning.  
 
 ### **Vad skulle vi vilja gjort annorlunda?**  
-Projektets ramar och mål var något otydliga från början, vilket gjorde det svårt att planera effektivt. Att vi parallellt arbetade med ett annat projekt skapade även utmaningar i tidsplaneringen. Nästa gång skulle vi tydligare definiera projektets omfattning från start.  
+Projektets ramar och mål var något otydliga från början, vilket gjorde det svårt att planera effektivt. Dessutom fick vi vissa komponenter sent, vilket begränsade hur mycket vi kunde göra i ett tidigt skede av projektet. Att vi parallellt arbetade med ett annat projekt skapade även utmaningar i tidsplaneringen. Nästa gång skulle vi önska tydligare definition av projektets omfattning från start för att lättare anpassa vår idé efter storleken på projektet.
 
-En annan förbättring skulle vara att använda PlatformIO istället för Arduino IDE från början, istället för att byta IDE mitt i projektet. Vi fick vissa komponenter sent, vilket begränsade hur mycket vi kunde göra i ett tidigt skede av projektet.  
+En annan förbättring skulle vara att använda PlatformIO istället för Arduino IDE från början, istället för att byta IDE mitt i projektet.
 
 ---
 
