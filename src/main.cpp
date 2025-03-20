@@ -24,6 +24,7 @@ void controlWaterPumpAndLEDs(int soilValue);
 void controlGrowLight(int lightValue);
 void setLEDColor(int red, int green, int blue);
 void setNeopixelColor(int red, int green, int blue);
+void setWaterPumpSpeed(int speed);
 
 void setup() // Initializes devices and sensors.
 {
@@ -34,7 +35,8 @@ void setup() // Initializes devices and sensors.
   pinMode(R_pin, OUTPUT);
   pinMode(B_pin, OUTPUT);
   strip.begin();
-  strip.show(); // Initialize all pixels to 'off'
+  strip.setBrightness(50); // Set brightness to 50%
+  strip.show();            // Initialize all pixels to 'off'
   Serial.begin(9600);
 
   lcd_1.begin(16, 2);
@@ -82,20 +84,19 @@ void controlWaterPumpAndLEDs(int soilValue)
 {
   if (soilValue > 950)
   {
-    Serial.println("Water pump on");
-
-    digitalWrite(waterPump, HIGH); // Turn on water pump
-    setLEDColor(0, 0, 255);        // Set LED color to red
+    setWaterPumpSpeed(200); // turn on water pump at 80% speed
+    setLEDColor(0, 0, 255); // Set LED color to red
     delay(1000);
   }
   else if (soilValue >= 450)
   {
+    setWaterPumpSpeed(123); // turn on water pump at 50% speed
     setLEDColor(255, 0, 0); // Set LED color to blue
   }
   else
   {
-    digitalWrite(waterPump, LOW); // Turn off water pump
-    setLEDColor(0, 255, 0);       // Set LED color to green
+    setWaterPumpSpeed(0);   // Turn off water pump
+    setLEDColor(0, 255, 0); // Set LED color to green
   }
 }
 
@@ -106,10 +107,10 @@ void controlWaterPumpAndLEDs(int soilValue)
  */
 void controlGrowLight(int lightValue)
 {
-  if (lightValue < 35) // Example condition for turning on the grow light
+  if (lightValue < 20) // Example condition for turning on the grow light
   {
     Serial.println("Grow light ON");
-    setNeopixelColor(255, 165, 0); // Warm orange/yellow for plant growth
+    setNeopixelColor(255, 165, 0); // Warm orange/yellow for plant growth´
   }
   else
   {
@@ -127,9 +128,9 @@ void controlGrowLight(int lightValue)
  */
 void setLEDColor(int red, int green, int blue)
 {
-  digitalWrite(R_pin, red);   // Set red color intensity
-  digitalWrite(G_pin, green); // Set green color intensity
-  digitalWrite(B_pin, blue);  // Set blue color intensity
+  analogWrite(R_pin, red);   // Set red color intensity
+  analogWrite(G_pin, green); // Set green color intensity
+  analogWrite(B_pin, blue);  // Set blue color intensity
 }
 
 /**
@@ -143,4 +144,9 @@ void setNeopixelColor(int red, int green, int blue)
     strip.setPixelColor(i, strip.Color(red, green, blue));
   }
   strip.show();
+}
+
+void setWaterPumpSpeed(int speed) // Speed range: 0-255
+{
+  analogWrite(waterPump, speed);
 }
