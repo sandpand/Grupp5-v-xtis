@@ -36,4 +36,4 @@ This project is an Arduino-based automatic plant watering system with light and 
 The system will automatically monitor soil moisture and light levels and activate the water pump and UV LED as needed. The LED indicator will show the status of the water pump.
 
 ### TinkerCad Demo
-https://www.tinkercad.com/things/04v7zNY2QWl-automatic-watering-system-with-lcd
+[https://www.tinkercad.com/things/04v7zNY2QWl-automatic-watering-system-with-lcd](https://www.tinkercad.com/things/e3VS3IHDUip/editel)
