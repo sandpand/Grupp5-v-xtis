@@ -1,14 +1,6 @@
 #include "Display/Display.h"
 
 /**
- * @class Display
- * @brief Handles the LCD display for showing sensor values.
- *
- * This class is responsible for initializing and updating the LCD display
- * with the soil moisture and light sensor values.
- */
-
-/**
  * @brief Constructor for the Display class.
  *
  * @param rs Register select pin for the LCD.
