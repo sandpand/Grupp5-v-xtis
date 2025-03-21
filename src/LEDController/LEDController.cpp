@@ -1,4 +1,4 @@
-"include <LEDController/LEDController.h"
+#include <LEDController/LEDController.h>
 
 void LEDController::setRGBColor(int red, int green, int blue) {
     analogWrite(R_PIN, red);     // Set Red color intensity
