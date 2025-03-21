@@ -7,13 +7,13 @@ int LED = 5;
 int R_pin = 2;
 int G_pin = 3;
 int B_pin = 4;
-int waterPump = 12;
+int waterPump = 11;
 int soilSensor = A0;
 int lightSensor = A1;
 
 #define LED_COUNT 16
 Adafruit_NeoPixel strip(LED_COUNT, LED, NEO_GRB + NEO_KHZ800); // Initialize NeoPixel strip
-LiquidCrystal lcd_1(6, 7, 8, 9, 10, 11);                       // Initialize LCD display with specified pins
+LiquidCrystal lcd_1(6, 7, 8, 9, 10, 12);                       // Initialize LCD display with specified pins
 
 // Sensor value variables
 int soilVal;
@@ -24,7 +24,7 @@ void controlWaterPumpAndLEDs(int soilValue);
 void controlGrowLight(int lightValue);
 void setLEDColor(int red, int green, int blue);
 void setNeopixelColor(int red, int green, int blue);
-void setWaterPumpSpeed(int speed);
+void setWaterPumpSpeed(bool state);
 
 void setup() // Initializes devices and sensors.
 {
@@ -84,19 +84,19 @@ void controlWaterPumpAndLEDs(int soilValue)
 {
   if (soilValue > 950)
   {
-    setWaterPumpSpeed(200); // turn on water pump at 80% speed
-    setLEDColor(0, 0, 255); // Set LED color to red
+    setWaterPumpSpeed(true); // turn on water pump
+    setLEDColor(0, 0, 255);  // Set LED color to red
     delay(1000);
   }
   else if (soilValue >= 450)
   {
-    setWaterPumpSpeed(123); // turn on water pump at 50% speed
-    setLEDColor(255, 0, 0); // Set LED color to blue
+    setWaterPumpSpeed(false); // Turn off water pump
+    setLEDColor(255, 0, 0);   // Set LED color to blue
   }
   else
   {
-    setWaterPumpSpeed(0);   // Turn off water pump
-    setLEDColor(0, 255, 0); // Set LED color to green
+    setWaterPumpSpeed(false); // Turn off water pump
+    setLEDColor(0, 255, 0);   // Set LED color to green
   }
 }
 
@@ -109,12 +109,10 @@ void controlGrowLight(int lightValue)
 {
   if (lightValue < 20) // Example condition for turning on the grow light
   {
-    Serial.println("Grow light ON");
     setNeopixelColor(255, 165, 0); // Warm orange/yellow for plant growth´
   }
   else
   {
-    Serial.println("Grow light OFF");
     setNeopixelColor(0, 0, 0); // Turn off LEDs
   }
 }
@@ -146,7 +144,7 @@ void setNeopixelColor(int red, int green, int blue)
   strip.show();
 }
 
-void setWaterPumpSpeed(int speed) // Speed range: 0-255
+void setWaterPumpSpeed(bool state) // Speed range: 0-255
 {
-  analogWrite(waterPump, speed);
+  digitalWrite(waterPump, state ? HIGH : LOW);
 }
