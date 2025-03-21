@@ -1,15 +1,24 @@
-#include <Display/Display.h>
+#include "Display/Display.h"
 
-void Display::begin() {
-    lcd.begin(16, 2);  // Initialize the LCD to 16x2 character display
+Display::Display(int rs, int en, int d4, int d5, int d6, int d7)
+    : lcd(rs, en, d4, d5, d6, d7) {}
+
+void Display::begin()
+{
+    lcd.begin(16, 2);
 }
 
-void Display::showValues(int soilValue, int lightValue) {
-    lcd.setCursor(0, 0);       // Set cursor to first row, first column
-    lcd.print("Soil: ");
-    lcd.print(soilValue);      // Display soil moisture value on LCD
+void Display::showValues(int soilValue, int lightValue)
+{
+    lcd.setCursor(0, 0);
+    lcd.print("Soil value: ");
+    lcd.print("    ");
+    lcd.setCursor(12, 0);
+    lcd.print(soilValue);
 
-    lcd.setCursor(0, 1);       // Set cursor to second row, first column
-    lcd.print("Light: ");
-    lcd.print(lightValue);     // Display light intensity value on LCD
+    lcd.setCursor(0, 1);
+    lcd.print("Light value: ");
+    lcd.print("    ");
+    lcd.setCursor(13, 1);
+    lcd.print(lightValue);
 }

@@ -6,7 +6,9 @@
 class LightSensor
 {
 public:
+    LightSensor(int pin);
     int read();
+    int pin;
 };
 
 #endif

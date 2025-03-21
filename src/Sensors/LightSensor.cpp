@@ -1,4 +1,8 @@
-#include <Sensors/LightSensor.h>
-int LightSensor::read() {
-    return analogRead(LIGHT_SENSOR_PIN); // Read the light intensity level
+#include "Sensors/LightSensor.h"
+
+LightSensor::LightSensor(int pin) : pin(pin) {}
+
+int LightSensor::read()
+{
+    return analogRead(pin);
 }

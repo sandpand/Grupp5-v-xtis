@@ -6,7 +6,9 @@
 class WaterPump
 {
 public:
-    void setSpeed(int speed);
+    WaterPump(int pin);
+    void setSpeed(bool state);
+    int pin;
 };
 
 #endif

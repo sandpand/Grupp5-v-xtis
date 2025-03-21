@@ -6,7 +6,9 @@
 class SoilSensor
 {
 public:
+    SoilSensor(int pin);
     int read();
+    int pin;
 };
 
 #endif
