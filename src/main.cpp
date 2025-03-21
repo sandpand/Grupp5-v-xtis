@@ -4,7 +4,7 @@
 
 #define LED_PIN 5
 #define LED_COUNT 16
-#define WATER_PUMP_PIN 12
+#define WATER_PUMP_PIN 11
 #define SOIL_SENSOR_PIN A0
 #define LIGHT_SENSOR_PIN A1
 #define R_PIN 2
@@ -65,7 +65,7 @@ class Display {
 private:
     LiquidCrystal lcd;
 public:
-    Display() : lcd(6, 7, 8, 9, 10, 11) {}
+    Display() : lcd(6, 7, 8, 9, 10, 12) {}
     
     void begin() {
         lcd.begin(16, 2);
