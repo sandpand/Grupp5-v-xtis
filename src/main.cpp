@@ -107,8 +107,6 @@ public:
         int lightVal = lightSensor.read();
         
         display.showValues(soilVal, lightVal);
-        Serial.print("Soil: "); Serial.println(soilVal);
-        Serial.print("Light: "); Serial.println(lightVal);
         
         controlWaterPumpAndLEDs(soilVal);
         controlGrowLight(lightVal);
@@ -128,10 +126,8 @@ public:
 
     void controlGrowLight(int lightValue) {
         if (lightValue < 20) {
-            Serial.println("Grow light ON");
             ledController.setNeopixelColor(255, 165, 0);
         } else {
-            Serial.println("Grow light OFF");
             ledController.setNeopixelColor(0, 0, 0);
         }
     }
